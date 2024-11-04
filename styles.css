@@ -158,40 +158,42 @@ main {
     padding: 20px;
 }
 
-
 .intro {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Ajuste para telas menores */
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1200px; /* Limita a largura máxima */
-    margin: 100px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento adicional nas laterais */
+    box-sizing: border-box;
 }
 
 .introText {
-    flex: 1;
-    margin-right: 15px; /* Espaço entre o texto e a imagem */
+    text-align: center;
+    margin-bottom: 20px; /* Espaço inferior para separação */
 }
 
 .intro h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ff69b4; /* Rosa */
 }
 
 .intro h2 {
-    font-size: 2rem;
-    margin: 10px 0; /* Margem entre o título e o subtítulo */
+    font-size: 1.5rem;
+    margin: 10px 0;
     color: #2f8be0;
 }
 
 .intro p {
-    font-size: 1.1rem;
-    line-height: 1.6; /* Melhor legibilidade */
-    margin-bottom: 20px; /* Margem abaixo do parágrafo */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .btn {
-    background-color: #ff69b4; /* Rosa */
+    background-color: #ff69b4;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -201,18 +203,45 @@ main {
 }
 
 .btn:hover {
-    background-color: #e65c9b; /* Cor mais escura no hover */
+    background-color: #e65c9b;
 }
 
 .introImage {
-    flex: 1; /* Faz a imagem ocupar a parte restante do espaço */
-    min-width: 600px; /* Largura mínima para a imagem */
+    width: 100%;
+    max-width: 600px; /* Largura máxima para a imagem */
+    margin-top: 20px; /* Espaço entre o texto e a imagem em telas menores */
+    text-align: center;
 }
 
 .introImage img {
-    width: 100%; /* A imagem ocupa 100% do espaço do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem; /* Reduz o tamanho em telas pequenas */
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .introImage {
+        max-width: 100%; /* Ajusta a largura da imagem */
+        margin-top: 20px;
+    }
+}
+
 
 
 .about {
