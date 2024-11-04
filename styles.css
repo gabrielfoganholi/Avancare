@@ -268,8 +268,23 @@ main {
 
 .aboutText span {
     color: #2f8be0; /* Cor do destaque */
-    font-size: 3vw; /* Tamanho da fonte responsivo */
+    font-size: 35px; /* Tamanho fixo inicial */
 }
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .aboutText span {
+        font-size: 40px; /* Reduzir o tamanho em tablets */
+    }
+}
+
+/* Ajustes para smartphones */
+@media (max-width: 480px) {
+    .aboutText span {
+        font-size: 30px; /* Reduzir o tamanho em smartphones */
+    }
+}
+
 
 .aboutText img {
     max-width: 100%; /* Imagem responsiva */
